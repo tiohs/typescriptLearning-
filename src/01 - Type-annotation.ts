@@ -33,3 +33,4 @@ function soma(x: number, y: number): number {
 
 const soma2 : (x: number, y: number) => number = (x, y) => x + y;
 
+// Obs : Quando o typo infêrir do tipo n então devemos atribuir um valor
