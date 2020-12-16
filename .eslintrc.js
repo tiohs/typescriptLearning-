@@ -37,4 +37,5 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["prettier", "@typescript-eslint"]
+  "plugins": ["prettier", "@typescript-eslint"],
+}
