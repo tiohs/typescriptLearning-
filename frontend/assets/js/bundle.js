@@ -27,8 +27,9 @@ form.addEventListener("submit", function (e) {
     checkEmail(email);
 });
 function checkEmail(input) {
-    if (!isEmail_1.default(input.value))
+    if (!isEmail_1.default(input.value)) {
         showErrorMessages(input, "Email invalido ");
+    }
 }
 function checkForEmptyFields() {
     var inputs = [];
@@ -42,7 +43,7 @@ function checkForEmptyFields() {
 }
 function hideErrorMessages(form) {
     form.querySelectorAll("." + showErrorMessage).forEach(function (e) {
-        return e.classList.remove(showErrorMessage);
+        e.classList.remove(showErrorMessage);
     });
 }
 function showErrorMessages(input, msg) {
@@ -51,7 +52,6 @@ function showErrorMessages(input, msg) {
     errorMessage.innerText = msg;
     formfileds.classList.add(showErrorMessage);
 }
-showErrorMessages(username, "Digite o user");
 
 
 /***/ }),

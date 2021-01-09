@@ -15,7 +15,9 @@ form.addEventListener("submit", function (e: Event) {
 });
 
 function checkEmail(input: HTMLInputElement): void {
-    if (!isEmail(input.value)) showErrorMessages(input, "Email invalido ");
+    if (!isEmail(input.value)) {
+        showErrorMessages(input, "Email invalido ");
+    }
 }
 
 function checkForEmptyFields(...inputs: HTMLInputElement[]): void {
@@ -26,9 +28,9 @@ function checkForEmptyFields(...inputs: HTMLInputElement[]): void {
 }
 
 function hideErrorMessages(form: HTMLFormElement): void {
-    form.querySelectorAll("." + showErrorMessage).forEach((e) =>
-        e.classList.remove(showErrorMessage)
-    );
+    form.querySelectorAll("." + showErrorMessage).forEach((e) => {
+        e.classList.remove(showErrorMessage);
+    });
 }
 function showErrorMessages(input: HTMLInputElement, msg: string): void {
     const formfileds = input.parentElement as HTMLDivElement;
@@ -38,5 +40,3 @@ function showErrorMessages(input: HTMLInputElement, msg: string): void {
     errorMessage.innerText = msg;
     formfileds.classList.add(showErrorMessage);
 }
-
-showErrorMessages(username, "Digite o user");
