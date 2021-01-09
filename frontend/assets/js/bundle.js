@@ -73,6 +73,12 @@ function showErrorMessages(input, msg) {
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 __webpack_require__(/*! ./form-controllers */ "./src/Desafio/form-controllers.ts");
+function myFunction(name) {
+    console.log(this);
+    console.log(this.name + name);
+    console.log(name);
+}
+myFunction.call({ name: "Hamilton" }, "Massango");
 
 
 /***/ }),
