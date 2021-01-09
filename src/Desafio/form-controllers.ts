@@ -7,16 +7,28 @@ const email = document.querySelector(".email") as HTMLInputElement;
 const password = document.querySelector(".password") as HTMLInputElement;
 const password2 = document.querySelector(".password2") as HTMLInputElement;
 
-form.addEventListener("submit", function (e: Event) {
+form.addEventListener("submit", (e: Event) => {
     e.preventDefault();
-    hideErrorMessages(this);
+    const target = e.target as HTMLFormElement;
+    hideErrorMessages(target);
     checkForEmptyFields(username, email, password, password2);
     checkEmail(email);
+    matchPassword(password, password2);
+    // if (shouldSendForm(this)) console.log('Pode enviar ');
 });
 
 function checkEmail(input: HTMLInputElement): void {
     if (!isEmail(input.value)) {
         showErrorMessages(input, "Email invalido ");
+    }
+}
+
+function matchPassword(
+    password: HTMLInputElement,
+    password2: HTMLInputElement
+) {
+    if (password.value !== password2.value) {
+        showErrorMessages(password2, "Password não bateu ! ");
     }
 }
 

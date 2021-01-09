@@ -22,13 +22,21 @@ var password = document.querySelector(".password");
 var password2 = document.querySelector(".password2");
 form.addEventListener("submit", function (e) {
     e.preventDefault();
-    hideErrorMessages(this);
+    var target = e.target;
+    hideErrorMessages(target);
     checkForEmptyFields(username, email, password, password2);
     checkEmail(email);
+    matchPassword(password, password2);
+    // if (shouldSendForm(this)) console.log('Pode enviar ');
 });
 function checkEmail(input) {
     if (!isEmail_1.default(input.value)) {
         showErrorMessages(input, "Email invalido ");
+    }
+}
+function matchPassword(password, password2) {
+    if (password.value !== password2.value) {
+        showErrorMessages(password2, "Password não bateu ! ");
     }
 }
 function checkForEmptyFields() {
