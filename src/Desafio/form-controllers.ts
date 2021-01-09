@@ -9,7 +9,15 @@ const password2 = document.querySelector(".password2") as HTMLInputElement;
 form.addEventListener("submit", function (e: Event) {
     e.preventDefault();
     hideErrorMessages(this);
+    checkForEmptyFields(username, email, password, password2);
 });
+
+function checkForEmptyFields(...inputs: HTMLInputElement[]): void {
+    inputs.forEach((input) => {
+        if (!input.value)
+            return showErrorMessages(input, "Campo não pode ficar vazio ");
+    });
+}
 
 function hideErrorMessages(form: HTMLFormElement): void {
     form.querySelectorAll("." + showErrorMessage).forEach((e) =>

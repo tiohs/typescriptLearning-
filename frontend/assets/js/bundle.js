@@ -18,7 +18,18 @@ var password2 = document.querySelector(".password2");
 form.addEventListener("submit", function (e) {
     e.preventDefault();
     hideErrorMessages(this);
+    checkForEmptyFields(username, email, password, password2);
 });
+function checkForEmptyFields() {
+    var inputs = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        inputs[_i] = arguments[_i];
+    }
+    inputs.forEach(function (input) {
+        if (!input.value)
+            return showErrorMessages(input, "Campo não pode ficar vazio ");
+    });
+}
 function hideErrorMessages(form) {
     form.querySelectorAll("." + showErrorMessage).forEach(function (e) {
         return e.classList.remove(showErrorMessage);
