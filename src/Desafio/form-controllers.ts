@@ -1,3 +1,4 @@
+import isEmail from "validator/lib/isEmail";
 const showErrorMessage = "show-error-message";
 
 const form = document.querySelector(".form") as HTMLFormElement;
@@ -10,7 +11,12 @@ form.addEventListener("submit", function (e: Event) {
     e.preventDefault();
     hideErrorMessages(this);
     checkForEmptyFields(username, email, password, password2);
+    checkEmail(email);
 });
+
+function checkEmail(input: HTMLInputElement): void {
+    if (!isEmail(input.value)) showErrorMessages(input, "Email invalido ");
+}
 
 function checkForEmptyFields(...inputs: HTMLInputElement[]): void {
     inputs.forEach((input) => {
