@@ -16,8 +16,16 @@ export class Pessoa {
     }
 }
 
-export class Aluno extends Pessoa {}
-export class Cliente extends Pessoa {}
+export class Aluno extends Pessoa {
+    getNomeCompleto(): string {
+        return "Aluno : " + this.nome + " " + this.sobrenome;
+    }
+}
+export class Cliente extends Pessoa {
+    getNomeCompleto(): string {
+        return "Cliente :" + this.nome + " " + this.sobrenome;
+    }
+}
 
 const pessoa = new Pessoa("Hamilton", "Silva", 10, "1029282");
 const aluno = new Aluno("Hamilton", "Miranda", 18, "klswduh23");
