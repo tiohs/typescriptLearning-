@@ -27,6 +27,7 @@ export class Database {
 
 const db = Database.getDatabase('localhost', 'tiohs', 'morena');
 const db1 = Database.getDatabase('localhost', 'pedro', 'jessica');
+const db2 = Database.getDatabase('localhost', 'pedro', 'jessica');
 
 console.log(db === db1)
 
