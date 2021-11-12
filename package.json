@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:frontend": "webpack -w",
-    "build:backend": "tsc"
+    "build:backend": "tsc",
+    "run": "ts-node --files --transpile-only"
   },
   "keywords": [],
   "author": "",
