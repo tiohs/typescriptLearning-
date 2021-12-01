@@ -1,3 +1,4 @@
+// OBS : As class também podem ser um tipo
 export class Empresa {
     public readonly name: String;
     private readonly colaboradores: Colaborador[] = [];

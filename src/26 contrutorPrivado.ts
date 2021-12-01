@@ -1,6 +1,7 @@
 // Crainda apenas uma conexão para a base de dados
 // Nome do metodo Singleton - Gof
-// Ele é muito bom para criar um instacia de um objecto
+// Ele é muito bom para criar uma instacia de um objecto, pode ser chamado varia
+// vez apenas cria uma instancia desse mesmo objecto
 // As class podem ser uma tipagem
 export class Database {
     private static database: Database;

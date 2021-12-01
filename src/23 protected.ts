@@ -1,3 +1,4 @@
+// Super subscrever os valores da class Pai
 export class Empresa {
     public readonly name: String;
     protected readonly colaboradores: Colaborador[] = [];

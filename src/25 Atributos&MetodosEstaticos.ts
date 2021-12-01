@@ -1,6 +1,8 @@
 
 
 // Só é possivel ter acesso a metodos estaticos pela class melhor dizer sem instaciar
+// Não é necessario escrever new Class() apenas chamar o metodo sem instanciar
+// Class().name
 export class Personal {
     static ageStart = 0;
     static cpfStart = '000.000.000-00';

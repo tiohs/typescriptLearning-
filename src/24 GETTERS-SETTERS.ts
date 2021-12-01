@@ -1,4 +1,7 @@
+// Getters - metodo para returno um valor da class
+// Setters - Para setar um valor a class
 export class Personal {
+
     constructor(
         private name: string,
         private firstName: string,

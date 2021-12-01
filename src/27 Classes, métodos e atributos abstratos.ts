@@ -1,8 +1,10 @@
 // É aquando falamos que uma classa é abstrata ela não pode ser instanciada por
-// uma outro elemento que não seja uma classe filha então ela só pode ser estendida
+// uma outro elemento que não seja uma classe filha então ela só pode ser
+// estendida por  uma class
 
 
-// Abstrate em um medodo estou a dizer que toda a class filho precisa de ter um
+// Metodo Abstrate é um metodo herdado da class pai que deve ser utilizado pela
+// class filho estou a dizer que toda a class filho precisa de ter um
 // o metodo que o pai diz ser abstrato .
 
 // Atributos abstatos tenhem o mesmo funcionamento de uma metodod
