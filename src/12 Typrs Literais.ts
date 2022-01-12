@@ -1,7 +1,5 @@
 // Usar valores como type
-
 let x = 10;
-// Type de valor porque o tipo dele só pode ser o valor
 const y = 10;
 let a:100 = 100;
 let c = 100 as const;
