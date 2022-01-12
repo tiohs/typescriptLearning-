@@ -1,4 +1,8 @@
+// Type Array
+// Formas de representação onde o tipo é reprensentado por T e pode receber os
+// valores string, number, boolean.
 // Array <T> - T[] posso add o meu proprio tipo
+// Ex :
 export function mulArgs(...args: Array<number>): number {
     return args.reduce((ac, valor) => ac * valor, 1);
 }
