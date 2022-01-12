@@ -5,7 +5,7 @@ function semRetorno (...args: string[] ): void{
 const pessoa = {
     nome: 'Luiz',
     sobrenome: 'Otávio',
-    exibirNome(): void {
+    exibirNome(): void{
         console.log(this.nome, this.sobrenome);
     }
 }
