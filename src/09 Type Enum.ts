@@ -1,4 +1,5 @@
-// Enum é usado para quando alguém tem mais opcação do que o esperado . Ele é um tipo e um valor
+// Enum é usado para quando alguém tem mais opcação do que o esperado.
+// Ele é um tipo e um valor
 
 enum Cores {
     VERMELHO, // 0
