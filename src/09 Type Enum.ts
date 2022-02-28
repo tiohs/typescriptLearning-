@@ -30,6 +30,7 @@ enum Cores1 {
     PRETO = 0
 }
 
+
 console.log(Cores1);
 console.log(Cores1.VERMELHO);
 console.log(Cores1.BRANCO);
