@@ -1,4 +1,4 @@
-// Fazendo associação sem depender do metodo
+// Metodo para não ligar direictamente com o Escritor e a ferramenta
 export class Escritor {
     private _ferramenta: Ferramenta | null = null;
 
