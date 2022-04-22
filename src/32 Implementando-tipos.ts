@@ -21,13 +21,17 @@ export class Pesso extends TipoPesso {
 
 
 // Sempre que vou usar um tipo a uma classe devo usar `implements`
+// Eu posso ter varios tipos implementados
+
 type TipoPessoa = {
     nome: string;
     sobrenome: string;
     nomeCompleto(): string;
 }
-
-export class Pessoa implements TipoPessoa {
+type TipoPessoaNome = {
+    nome: string;
+}
+export class Pessoa implements TipoPessoa, TipoPessoaNome  {
     constructor(public nome:string, public sobrenome: string) {
 
     }
