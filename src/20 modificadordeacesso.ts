@@ -1,3 +1,6 @@
+//  private - Apenas dentro da classe
+//  public - É o mais aberto possivel pode ser acessado até fora da class
+//  protected - Dentro da class e das filhas
 export class Empresa {
     private readonly name: String;
     private readonly colaboradores: Colaborador[] = [];
