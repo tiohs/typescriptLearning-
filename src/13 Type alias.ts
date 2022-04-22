@@ -1,4 +1,5 @@
 // Criando type elias devem começar com letra maiúscula
+
 type Idade = number;
 type Pessoa = {
     nome: string;
