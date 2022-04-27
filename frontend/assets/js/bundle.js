@@ -19,10 +19,42 @@ __webpack_require__(/*! ../ExercioVideo/ExercioVideo */ "./src/ExercioVideo/Exer
 /*!******************************************!*\
   !*** ./src/ExercioVideo/ExercioVideo.ts ***!
   \******************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, exports) => {
 
 
-console.log('OI');
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+class VideoPlayer {
+    constructor(videoPlayerElementsProps) {
+        this.videoPlayer = videoPlayerElementsProps.videoPlayer;
+        this.playButton = videoPlayerElementsProps.playButton;
+        this.stopButton = videoPlayerElementsProps.stopButton;
+    }
+    playToggle() {
+        if (this.videoPlayer.paused) {
+            this.videoPlayer.play();
+            this.playButton.innerHTML = 'Pause';
+        }
+        else {
+            this.videoPlayer.pause();
+            this.playButton.innerHTML = 'Play';
+        }
+    }
+    stop() {
+        throw new Error('Method not implemented.');
+    }
+    eventStart() {
+        this.playButton.addEventListener('click', () => {
+            this.playToggle();
+        });
+    }
+}
+exports.default = VideoPlayer;
+const videoPlayer = new VideoPlayer({
+    videoPlayer: document.querySelector('.video'),
+    playButton: document.querySelector('.play'),
+    stopButton: document.querySelector('.stop')
+});
+videoPlayer.eventStart();
 
 
 /***/ })
