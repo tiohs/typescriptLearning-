@@ -36,15 +36,20 @@ class VideoPlayer {
         }
         else {
             this.videoPlayer.pause();
-            this.playButton.innerHTML = 'Play';
+            this.playButton.innerHTML = 'Player';
         }
     }
     stop() {
-        throw new Error('Method not implemented.');
+        this.videoPlayer.pause();
+        this.videoPlayer.currentTime = 0;
+        this.playButton.innerHTML = 'Player';
     }
     eventStart() {
         this.playButton.addEventListener('click', () => {
             this.playToggle();
+        });
+        this.stopButton.addEventListener('click', () => {
+            this.stop();
         });
     }
 }

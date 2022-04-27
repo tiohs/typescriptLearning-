@@ -26,17 +26,21 @@ export default class VideoPlayer implements VideoPlayerProtocol {
             this.playButton.innerHTML = 'Pause';
         }else{
             this.videoPlayer.pause();
-            this.playButton.innerHTML = 'Play';
-
+            this.playButton.innerHTML = 'Player';
         }
     }
 
     stop(): void{
-        throw new Error('Method not implemented.');
+        this.videoPlayer.pause();
+        this.videoPlayer.currentTime = 0;
+        this.playButton.innerHTML = 'Player';
     }
     eventStart(): void{
-        this.playButton.addEventListener('click', ()=> {
+        this.playButton.addEventListener('click', () => {
             this.playToggle();
+        });
+        this.stopButton.addEventListener('click', () => {
+            this.stop();
         });
     }
 
