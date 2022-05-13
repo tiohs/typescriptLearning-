@@ -12,3 +12,5 @@ const doc: Doc = {
 }
 
 console.log(doc.data?.toDateString() ?? 'Ixi, não existe data');
+
+console.log(false ?? 'Ixi, não existe data'); // Retorna falso porque ele só não retorna não valor null, undefined
