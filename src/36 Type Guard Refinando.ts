@@ -1,3 +1,4 @@
+// Type Guards usamos mais para verificar se um objecto tem um determinado tipo
 function add(a: unknown,  b:unknown): number | string {
     if(typeof a === 'number' && typeof b === 'number') return a + b;
     return `${a}${b}`;
